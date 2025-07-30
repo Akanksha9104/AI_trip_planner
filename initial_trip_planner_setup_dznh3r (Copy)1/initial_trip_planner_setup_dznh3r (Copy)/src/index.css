@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #1e1e1e;
+  --color-bg-tertiary: #2d2d2d;
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #9ca3af;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-border: #374151;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100;
+    font-family: "Inter Variable", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-50 font-semibold;
+  }
+}
+
+@layer components {
+  .accent-text {
+    @apply text-blue-400;
+  }
+
+  .button {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md hover:shadow-lg active:shadow-sm active:translate-y-0.5;
+  }
+
+  .card {
+    @apply bg-gray-800 border border-gray-700 rounded-lg shadow-lg overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 rounded-md bg-gray-800 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all;
+  }
+
+  .auth-button {
+    @apply w-full py-2 rounded-md text-white font-medium bg-blue-600 hover:bg-blue-700 transition-colors;
+  }
+
+  .link-text {
+    @apply text-blue-400 hover:text-blue-300 hover:underline cursor-pointer font-medium;
+  }
+
+  .trip-card {
+    @apply border border-gray-700 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors relative;
+  }
+
+  .trip-card .delete-btn {
+    @apply opacity-0 transition-opacity;
+  }
+
+  .trip-card:hover .delete-btn {
+    @apply opacity-100;
+  }
+
+  .trip-card-active {
+    @apply border-blue-500 bg-gray-700;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-gray-50 mb-4;
+  }
+}
